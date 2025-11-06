@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Banana Paradise{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Banana Paradise! 🍌</h1>
+            <p class="hero-subtitle">Discover the amazing world of bananas - nature's perfect snack!</p>
+            <div class="hero-emoji">🍌🍌🍌</div>
+            <p class="hero-description">
+                Bananas are one of the most popular and beloved fruits in the world. 
+                They're nutritious, delicious, and incredibly versatile. Join us on a journey 
+                to explore everything about this wonderful yellow fruit!
+            </p>
+            <div class="cta-buttons">
+                <a href="/facts" class="btn btn-primary">Discover Facts</a>
+                <a href="/nutrition" class="btn btn-secondary">Nutrition Info</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why We Love Bananas</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💪</div>
+                <h3>Energy Boost</h3>
+                <p>Packed with natural sugars and carbohydrates for instant energy</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <h3>Heart Healthy</h3>
+                <p>Rich in potassium which supports cardiovascular health</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">😊</div>
+                <h3>Mood Booster</h3>
+                <p>Contains tryptophan which helps improve mood and reduce stress</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3>Digestive Aid</h3>
+                <p>High in fiber to support healthy digestion</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fun-section">
+    <div class="container">
+        <h2 class="section-title">Did You Know?</h2>
+        <div class="fun-fact-box">
+            <p class="fun-fact">
+                🎉 Bananas are the world's most popular fruit! Over 100 billion bananas 
+                are consumed globally each year. That's about 13 bananas per person!
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

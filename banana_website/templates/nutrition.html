@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Nutrition - Banana Paradise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Banana Nutrition 🍌</h1>
+        <p class="page-subtitle">Discover the nutritional powerhouse in every banana!</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="nutrition-intro">
+            <h2>Nutritional Value per Medium Banana (118g)</h2>
+            <p>Bananas are incredibly nutritious and provide a wide range of essential vitamins and minerals.</p>
+        </div>
+
+        <div class="nutrition-grid">
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.calories }}</div>
+                <div class="nutrition-label">Calories</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.carbs }}</div>
+                <div class="nutrition-label">Carbohydrates</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.fiber }}</div>
+                <div class="nutrition-label">Dietary Fiber</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.protein }}</div>
+                <div class="nutrition-label">Protein</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.potassium }}</div>
+                <div class="nutrition-label">Potassium</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.vitamin_c }}</div>
+                <div class="nutrition-label">Vitamin C</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.vitamin_b6 }}</div>
+                <div class="nutrition-label">Vitamin B6</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrition-value">{{ nutrition.magnesium }}</div>
+                <div class="nutrition-label">Magnesium</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits-section">
+    <div class="container">
+        <h2 class="section-title">Health Benefits</h2>
+        <div class="benefits-list">
+            {% for benefit in benefits %}
+            <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span class="benefit-text">{{ benefit }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="tips-section">
+    <div class="container">
+        <h2 class="section-title">When to Eat Bananas</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>🌅 Morning</h3>
+                <p>Great for breakfast to kickstart your day with energy</p>
+            </div>
+            <div class="tip-card">
+                <h3>🏃 Pre-Workout</h3>
+                <p>Perfect fuel before exercise for sustained energy</p>
+            </div>
+            <div class="tip-card">
+                <h3>💪 Post-Workout</h3>
+                <p>Helps replenish glycogen and aids muscle recovery</p>
+            </div>
+            <div class="tip-card">
+                <h3>🌙 Evening Snack</h3>
+                <p>Can help promote better sleep due to magnesium content</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

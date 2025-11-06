@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Recipes - Banana Paradise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Delicious Banana Recipes 🍌</h1>
+        <p class="page-subtitle">Try these amazing recipes featuring bananas!</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="recipes-grid">
+            {% for recipe in recipes %}
+            <div class="recipe-card">
+                <div class="recipe-header">
+                    <h3 class="recipe-name">{{ recipe.name }}</h3>
+                    <span class="recipe-emoji">🍌</span>
+                </div>
+                <p class="recipe-description">{{ recipe.description }}</p>
+                <div class="recipe-ingredients">
+                    <h4>Ingredients:</h4>
+                    <ul>
+                        {% for ingredient in recipe.ingredients %}
+                        <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="tips-section">
+    <div class="container">
+        <h2 class="section-title">Cooking Tips</h2>
+        <div class="cooking-tips">
+            <div class="tip-box">
+                <h3>🍌 Ripeness Matters</h3>
+                <p>Use ripe bananas with brown spots for baking - they're sweeter and easier to mash!</p>
+            </div>
+            <div class="tip-box">
+                <h3>❄️ Freeze for Later</h3>
+                <p>Peel and freeze overripe bananas for smoothies and baking. They'll last for months!</p>
+            </div>
+            <div class="tip-box">
+                <h3>🥄 Natural Sweetener</h3>
+                <p>Mashed bananas can replace sugar in many recipes, making them healthier!</p>
+            </div>
+            <div class="tip-box">
+                <h3>🥚 Egg Substitute</h3>
+                <p>One mashed banana can replace one egg in vegan baking recipes!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fun-section">
+    <div class="container">
+        <h2 class="section-title">Quick Banana Snack Ideas</h2>
+        <div class="snack-ideas">
+            <div class="snack-item">🥜 Banana with peanut butter</div>
+            <div class="snack-item">🍫 Chocolate-dipped frozen banana</div>
+            <div class="snack-item">🥣 Banana with yogurt and granola</div>
+            <div class="snack-item">🍯 Banana with honey and cinnamon</div>
+            <div class="snack-item">🥤 Banana smoothie bowl</div>
+            <div class="snack-item">🍞 Banana on toast with almond butter</div>
+        </div>
+    </div>
+</section>
+{% endblock %}

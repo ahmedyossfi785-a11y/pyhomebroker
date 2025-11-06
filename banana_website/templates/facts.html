@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Banana Facts - Banana Paradise{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Amazing Banana Facts 🍌</h1>
+        <p class="page-subtitle">Prepare to be amazed by these fascinating banana facts!</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="facts-grid">
+            {% for fact in facts %}
+            <div class="fact-card">
+                <div class="fact-number">{{ loop.index }}</div>
+                <h3 class="fact-title">{{ fact.title }}</h3>
+                <p class="fact-description">{{ fact.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="trivia-section">
+    <div class="container">
+        <h2 class="section-title">More Banana Trivia</h2>
+        <div class="trivia-grid">
+            <div class="trivia-item">
+                <span class="trivia-emoji">🌍</span>
+                <p>India is the world's largest producer of bananas, growing over 30 million tons annually!</p>
+            </div>
+            <div class="trivia-item">
+                <span class="trivia-emoji">🎨</span>
+                <p>The inside of a banana peel can be used to polish leather shoes and silverware!</p>
+            </div>
+            <div class="trivia-item">
+                <span class="trivia-emoji">🧬</span>
+                <p>Humans share about 50% of their DNA with bananas!</p>
+            </div>
+            <div class="trivia-item">
+                <span class="trivia-emoji">📱</span>
+                <p>The term "going bananas" originated in the 1960s and means going crazy or wild!</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
